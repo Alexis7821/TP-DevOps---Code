@@ -1,0 +1,4 @@
+#!/bin/sh
+Authorized access only, server belongs to Unilasalle
+"Hostname: {{ ansible_host }}."
+"Groupe :  {{ group_names | join(', ') }}."
