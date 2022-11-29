@@ -1,0 +1,16 @@
+- name: Change banner
+  hosts: all
+  tasks:
+#  - name: copy
+#    copy:
+#     src: banner
+#     dest: /etc/banner
+#  - name: Change template
+#    template:
+#     src: banner.j2
+#     dest: /etc/banner
+  - name: Changer la ligne dans le ssh_config
+    lineinfile:
+     path: /etc/postgresql/14/main/postgresql.conf
+     regexp: 'port'
+     line: port 5431
