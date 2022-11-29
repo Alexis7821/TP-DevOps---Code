@@ -1,0 +1,8 @@
+[db]
+database
+[web]
+webserver
+[db:vars]
+ansible_user=root
+[web:vars]
+ansible_user=root
