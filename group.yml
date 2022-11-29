@@ -1,0 +1,23 @@
+- name:
+  hosts: all
+  tasks:
+  - name: Ajouter un groupe
+    group:
+     name: supervision
+     state: present
+  - name: Ajouter un groupe
+    group:
+     name: applicative
+     state: present
+  - name: Ajouter un user
+    user:
+     name: supervision
+     group: supervision
+  - name: Ajouter un user
+    user:
+     name: applicative
+     group: applicative
+  - name: Ajouter un user
+    user:
+     name: dbadmin #ou web pour le webserver
+     group: applicative
