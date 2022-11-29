@@ -1,0 +1,12 @@
+- name: install apache on webserver
+  hosts: database
+  tasks:
+  - name: install postgresql package
+    apt:
+     name: postgresql
+     state: present
+    become: yes
+  - name: check if service is started
+    service:
+     name: postgresql
+     state: started
