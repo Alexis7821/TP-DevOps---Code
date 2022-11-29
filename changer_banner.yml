@@ -1,0 +1,12 @@
+- name: Change banner
+  hosts: all
+  tasks:
+  - name: copy
+    copy:
+     src: banner
+     dest: /etc/banner
+  - name: Changer la ligne dans le ssh_config
+     lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: 'Banner'
+      line: Banner /etc/banner
